@@ -19,4 +19,3 @@ enlacesMenu.forEach(enlace => {
     })
 })
 
-feather.replace()
