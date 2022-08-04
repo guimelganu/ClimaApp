@@ -88,6 +88,19 @@ body {
     display: none;
 }
 
+.input-search .button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+    color: var(--blanco);
+    font-size: 22px;
+    /* display: none; */
+}
+
+
+
 /* ENLACES MENU */
 
 .menu .enlace {
