@@ -5,6 +5,7 @@
     --azul-opacidad: #184463;
     --bg-menu: #003053;
     --bg-body: #C7E1FF;
+	--gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
     
     
 }
@@ -105,7 +106,7 @@ body {
 
 /* ENLACES MENU */
 
-.menu .enlace {
+ .menu .enlace {
     width: 100%;
     padding: 20px 0 20px 17px;
     border-radius: 8px;
@@ -130,7 +131,7 @@ body {
     opacity: 0;
     transition: opacity .3s ;
 }
-
+ 
 .menu-dashboard.open {
     max-width: 300px;
 }
@@ -151,13 +152,9 @@ body {
 .menu-dashboard.open .menu .enlace span {
     opacity: 1;
 }
-
+ 
 
 /* CONTENIDO DASHBOARD */
-
-:root {
-	--gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
-}
 
 .clear {
 	clear: both;
@@ -317,3 +314,10 @@ body {
 	font-weight: 700;
 }
 
+#myChart{
+	width: 300px;
+	height: 200px;
+	display: flex;
+	background-color: var(--blanco);
+	margin-left: 85px;
+}

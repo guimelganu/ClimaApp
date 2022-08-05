@@ -7,6 +7,22 @@ const maxTemp = document.querySelector('#MxTmp');
 const minTemp = document.querySelector('#MinTmp');
 const wind = document.querySelector('#wind');
 
+/* THOR: Elementos del canvas para uso del Chart.js, cree el canvas y añadi el id mychart para poder anexar los datos dentro
+de una const */
+const ctx = document.getElementById ("myChart").getContext("2d");
+const myChart = new Chart (ctx,{
+    type:"line",
+    data:{
+        labels:['Mañana', 'Dia 3', 'Dia 4'],
+        datasets:[{
+            label:'Pronostico Temperatura',
+            data:[8,20,50],
+            backgroundColor:[
+                'rgb(68, 229, 234 )',
+            ]
+        }]
+    }
+});
 
 /*THOR: Elementos para la conexion de la api */
 const button = document.querySelector('.button')
@@ -61,10 +77,4 @@ toggle.addEventListener("click", () => {
     }
 })
 
-enlacesMenu.forEach(enlace => {
-    enlace.addEventListener("click", () => {
-        menuDashboard.classList.add("open")
-        toggle.classList.replace("bx-menu", "bx-x")
-    })
-})
 

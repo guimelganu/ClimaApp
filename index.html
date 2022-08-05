@@ -14,12 +14,14 @@
     <!-- BOX ICONS -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+
+
+   
 </head>
 
 <body>
 
         <main class="menu-dashboard">
-
             <!-- TOP MENU -->
             <article class="top-menu">
                 
@@ -27,7 +29,6 @@
                     <i class='bx bx-menu'></i>
                 </article>
             </article>
-      
 
         <!-- INPUT SEARCH -->
         <article class="input-search">
@@ -35,31 +36,15 @@
             <input type="text" class="input" placeholder="Ciudad">
 
             <!-- THOR: Añadi boton de busqueda -->
-            <input type="submit" id="search" class="button" value="Buscar">
-        </article>
-
-        <!-- MENU -->
-        <section class="menu">
-
-            <article class="enlace">
-                <i class="bx bx-grid-alt"></i>
-                <span>Proximos días</span>
-            </article>
-
-
-            <article class="enlace">
-                <i class="bx bx-heart"></i>
-                <span>Favoritos</span>
-            </article>
-
-        </section>
+            <input type="submit" id="search" class="button" value="Buscar">       
+        </article>     
     </main>
 
 
 
     <!--CONTENIDO DE DASHBOARD-->
     
-    <article class="container">
+    <section class="container">
 
         <article class="weather-side">
 
@@ -80,7 +65,7 @@
         </article>
 
 
-        <article class="info-side">
+        <section class="info-side">
           
           <article class="week-container">
 
@@ -114,14 +99,17 @@
             </ul>
 
           </article>
-        </article>
-      </article>
+          
+        <!-- Comienzo de Grafica con Chart.Js -->
+          <canvas id="myChart"></canvas>
+        </section>
+      </section>
 
    
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
     <script src='Js/main.js'></script>
 </body>
 
