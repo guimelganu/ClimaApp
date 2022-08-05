@@ -27,7 +27,7 @@ body {
 /* LAYOUT */
 
 .menu-dashboard {
-    max-width: 150px;
+    max-width: 200px;
     height: 100vh;
     background: var(--bg-menu);
     padding: 20px;
