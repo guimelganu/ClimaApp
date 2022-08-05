@@ -19,17 +19,19 @@ const temp = document.querySelector ('.temp');
 button.addEventListener ('click',function(){
     
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=e118897ef97711f5e8168e4f854c5287'+'&lang=es')
+        
+    
         .then(Response => Response.json())
         .then (data =>{
             var nameValue = data ['name'];
             var tempValue = data ['main']['temp'];
-            let tempC = [tempValue - 273.1] + "°";
+            let tempC = (tempValue - 273.1).toFixed(2) + "°";
             var descValue = data ['weather'][0]['description'];
             let humedadValue = data ['main']['humidity'] + '%';
             let maxTempValue = data ['main']['temp_max'];
-            let maxTempC = [maxTempValue - 273.1] + '°';
+            let maxTempC = [(maxTempValue - 273.1).toFixed(2)] + '°';
             let minTempValue = data ['main']['temp_min'];
-            let minTempC = minTempValue-273.1.toFixed(2) + '°';
+            let minTempC = (minTempValue-273.1).toFixed(2) + '°';
             let windValue = data ['wind']['speed'] + 'km';
            
             name.innerHTML = nameValue;
@@ -49,6 +51,8 @@ button.addEventListener ('click',function(){
 
 toggle.addEventListener("click", () => {
     menuDashboard.classList.toggle("open")
+     const search = document.getElementById ('search')
+     search.style.display= "block"
 
     if(toggle.classList.contains("bx-menu")){
         toggle.classList.replace("bx-menu", "bx-x")

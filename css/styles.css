@@ -88,7 +88,7 @@ body {
     display: none;
 }
 
-.input-search .button {
+.input-search, .button {
     border: none;
     outline: none;
     background-color: transparent;
@@ -96,10 +96,12 @@ body {
     height: 30px;
     color: var(--blanco);
     font-size: 22px;
-    /* display: none; */
 }
 
-
+#search{
+	
+	display: none;
+}
 
 /* ENLACES MENU */
 
