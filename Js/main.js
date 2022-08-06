@@ -1,4 +1,4 @@
-//Manipulación del DOM
+//Declaramos los NODOS del DOM para la información que nos traera la API.
 const toggle = document.querySelector(".toggle");
 const menuDashboard = document.querySelector(".menu-dashboard");
 const enlacesMenu = document.querySelectorAll(".enlace");
