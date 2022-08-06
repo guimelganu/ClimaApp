@@ -14,7 +14,6 @@ const name = document.querySelector ('.name');
 const desc = document.querySelector ('.desc');
 const temp = document.querySelector ('.temp');
 
-
 /*THOR: CONEXION A API CON FETCH PARA QUE MUESTRE TEMPERATURA, CIUDAD Y DESCRIPCION */
 button.addEventListener ('click',function(){
     
@@ -39,13 +38,15 @@ button.addEventListener ('click',function(){
             maxTemp.innerHTML = maxTempC;
             minTemp.innerHTML = minTempC;
             wind.innerHTML = windValue;
-
         })
         
         .catch( err => alert("Error Nombre de ciudad"))
 
     })
 
+        
+    
+    
 
     /* THOR: Elementos del canvas para uso del Chart.js, cree el canvas y añadi el id mychart para poder anexar los datos dentro de una const */
     const ctx = document.getElementById("myChart").getContext("2d");
@@ -55,7 +56,7 @@ button.addEventListener ('click',function(){
             labels:['Temp Actual', 'Temp Minima', 'Temp Maxima'],
             datasets:[{
                 label:'Temperatura',
-                data:[8,20,50],
+                data:[parseInt(tempVal),20,50],
                 backgroundColor:[
                     'rgb(68, 229, 234 )',
                 ]
