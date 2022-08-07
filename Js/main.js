@@ -1,3 +1,4 @@
+
 //Declaramos los NODOS del DOM para la información que nos traera la API.
 const toggle = document.querySelector(".toggle");
 const menuDashboard = document.querySelector(".menu-dashboard");
@@ -24,12 +25,12 @@ button.addEventListener ('click',function(){
             var tempValue = data ['main']['temp'];
             var tempC = (tempValue - 273.1).toFixed(2);
             var descValue = data ['weather'][0]['description'];
-            let humedadValue = data ['main']['humidity'] + '%';
-            let maxTempValue = data ['main']['temp_max'];
-            let maxTempC = (maxTempValue - 273.1).toFixed(2) + '°';
-            let minTempValue = data ['main']['temp_min'];
-            let minTempC = (minTempValue-273.1).toFixed(2) + '°';
-            let windValue = data ['wind']['speed'] + 'km';
+            var humedadValue = data ['main']['humidity'] + '%';
+            var maxTempValue = data ['main']['temp_max'];
+            var maxTempC = (maxTempValue - 273.1).toFixed(2) + '°';
+            var minTempValue = data ['main']['temp_min'];
+            var minTempC = (minTempValue-273.1).toFixed(2) + '°';
+            var windValue = data ['wind']['speed'] + 'km';
             
             name.innerHTML = nameValue;
             temp.innerHTML = tempC;
@@ -43,26 +44,33 @@ button.addEventListener ('click',function(){
         .catch( err => alert("Error Nombre de ciudad"))
 
     })
-
-        
+    
+   
     
     
 
     /* THOR: Elementos del canvas para uso del Chart.js, cree el canvas y añadi el id mychart para poder anexar los datos dentro de una const */
+        
+      
     const ctx = document.getElementById("myChart").getContext("2d");
+ 
+
+
     const myChart = new Chart (ctx,{
         type:"line",
         data:{
             labels:['Temp Actual', 'Temp Minima', 'Temp Maxima'],
             datasets:[{
                 label:'Temperatura',
-                data:[parseInt(tempVal),20,50],
+                data: [28,20,35],
                 backgroundColor:[
                     'rgb(68, 229, 234 )',
                 ]
             }]
         }
     });
+  
+
     
     
     toggle.addEventListener("click", () => {
@@ -76,6 +84,5 @@ button.addEventListener ('click',function(){
             toggle.classList.replace("bx-x", "bx-menu")
         }
     })
-    
     
     
