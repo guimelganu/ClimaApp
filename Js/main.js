@@ -1,19 +1,5 @@
-
-//Declaramos los NODOS del DOM para la información que nos traera la API.
-const toggle = document.querySelector(".toggle");
-const menuDashboard = document.querySelector(".menu-dashboard");
-const enlacesMenu = document.querySelectorAll(".enlace");
-const humedad = document.querySelector('#humedad');
-const maxTemp = document.querySelector('#MxTmp');
-const minTemp = document.querySelector('#MinTmp');
-const wind = document.querySelector('#wind');
-
-/*THOR: Elementos para la conexion de la api */
-const button = document.querySelector('.button')
-const input = document.querySelector('.input')
-const name = document.querySelector ('.name');
-const desc = document.querySelector ('.desc');
-const temp = document.querySelector ('.temp');
+import {toggle, menuDashboard, enlacesMenu,
+     humedad, maxTemp, minTemp, wind, button, input, name, desc, temp} from "./constantes.js" 
 
 /*THOR: CONEXION A API CON FETCH PARA QUE MUESTRE TEMPERATURA, CIUDAD Y DESCRIPCION */
 button.addEventListener ('click',function(){
